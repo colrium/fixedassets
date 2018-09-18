@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: url(Questrial.ttf) format('truetype'); /* For IE6-8 */
+  src: local('Questrial'),       
+       url(Questrial.ttf) format('truetype');
+  
+}
+@font-face {
+  font-family: 'Lato-Light';
+  font-style: normal;
+  src: url(Lato-Light.ttf) format('truetype'); /* For IE6-8 */
+  src: local('Lato-Light'),       
+       url(Lato-Light.ttf) format('truetype');
+  
+}
+
+@font-face {
+  font-family: 'SourceSansPro';
+  font-style: normal;
+  src: url(SourceSansPro-Light.ttf) format('truetype'); /* For IE6-8 */
+  src: local(SourceSansPro-Light),       
+       url(SourceSansPro-Light.ttf) format('truetype');
+  
+}
+.lato-light{
+  font-family: 'Lato-Light';
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+}
+
+
+.questrial{
+  font-family: 'Questrial';
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+}
+.sourcesanspro{
+  font-family: 'SourceSansPro';
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+}

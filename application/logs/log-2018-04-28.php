@@ -1,0 +1,6 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2018-04-28 18:53:01 --> Severity: Notice --> Undefined variable: nav C:\xampp\htdocs\modules\application\views\navviews\nav-menu.php 5
+ERROR - 2018-04-28 19:17:13 --> Severity: Notice --> Undefined variable: nav C:\xampp\htdocs\modules\application\views\navviews\nav-menu.php 5
+ERROR - 2018-04-28 19:37:08 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ASC' at line 1 - Invalid query: SELECT field_names.module AS module, field_names.parentTable AS parentTable, field_names.parentTableName AS parentTableName, field_names.parentTableIdColumns AS parentTableIdColumns, recyclebin.id AS id, recyclebin.module AS module, recyclebin.entity AS entity, recyclebin.data AS data, recyclebin.timestamp AS timestamp, CONCAT_WS(' ', users.username) AS user FROM recyclebin    LEFT JOIN field_names ON  recyclebin.entity = field_names.parentTable LEFT JOIN users ON  recyclebin.user = users.id  WHERE 1  GROUP BY recyclebin.id  ORDER BY recyclebin.timestamp ASC ASC;
+ERROR - 2018-04-28 19:45:04 --> Severity: Notice --> Undefined variable: nav C:\xampp\htdocs\modules\application\views\navviews\nav-menu.php 5

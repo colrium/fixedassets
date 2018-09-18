@@ -1,0 +1,132 @@
+            .search-wrapper {
+               margin:12px 0;
+            }
+
+
+            .search-wrapper .input-holder {
+                overflow: hidden;
+                height: 2rem;
+                background: transparent;
+                border-radius: 1rem;
+                position: relative;
+                width:2rem;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+            .search-wrapper.active .input-holder {
+                border-radius: 1rem;
+                width:100%;
+                background: #e0e0e0;
+                -webkit-transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+                -moz-transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+                transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+            }
+
+            .search-wrapper .input-holder .search-input {
+                width:2rem;
+                height: 2rem;
+                padding:0px 2rem 0 1rem;
+                opacity: 0;
+                position: absolute;
+                top:0;
+                left:0;
+                background: transparent;
+                
+                font-size: 1rem;
+                line-height: 2rem;
+                color: var(--primaryColor);
+
+                -webkit-transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+                -moz-transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+                transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+
+                -webkit-transition-delay: 0.3s;
+                -moz-transition-delay: 0.3s;
+                transition-delay: 0.3s;
+            }
+            .search-wrapper.active .input-holder .search-input {
+                width:100%;
+                opacity: 1;
+
+            }
+
+            .search-wrapper .input-holder .search-icon {
+                position: absolute;
+                top:0;
+                right: 0;
+                width:2rem;
+                height:2rem;
+                border-radius:1rem;
+                border:0px solid transparent;
+                color: var(--accentColor);
+                background: transparent;
+                z-index: 2;
+                cursor: pointer;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+            .search-wrapper.active .input-holder .search-icon {
+                position: absolute;
+                top:0;
+                right: 0;
+                width: 2rem;
+                height:2rem;
+                background: var(--accentColor);
+                cursor: pointer;
+                border:0px solid transparent;
+
+            }
+            .search-wrapper .input-holder .search-icon span {
+                position:absolute;
+                top: 0;
+                left: 0;
+                width:2rem;
+                height:2rem;
+                font-size: 1.5rem;
+                line-height: 2rem;
+                display: inline-block;
+                border: 0px solid transparent;
+                font-family: 'Material Icons';
+                color: var(--accentColor);
+                vertical-align: middle;                
+                text-align: center;
+                -webkit-transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+                -moz-transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+                transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+
+            }
+            .search-wrapper.active .input-holder .search-icon span {
+                position: absolute;
+                top:0;
+                right: 0;
+                width:2rem;
+                height:2rem;
+                font-size: 1.2rem;
+                line-height: 2rem;
+                border-width: 0px;
+                display: inline-block;
+                font-family: 'Material Icons';
+                color: var(--inverseTextColor);               
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            
+
+            
+
+
+            .search-wrapper .result-container {
+                width: 100%;
+                position: absolute;
+                top:2.5rem;
+                left:0;
+                text-align: center;
+                font-family: inherit;
+                font-size: 0.8rem;
+                display:none;
+                color:#B7B7B7;
+            }
+

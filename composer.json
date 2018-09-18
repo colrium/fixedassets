@@ -1,0 +1,6 @@
+{
+	"require": {
+		"phpoffice/phpspreadsheet": "^1.2",
+		"safaricom/mpesa": "^1.0"
+	}
+}

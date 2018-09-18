@@ -1,0 +1,48 @@
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteRule ^([a-z0-9_-]+)\.html$ index.php/page/$1 [L]
+RewriteCond $1 !^(index\.php)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# For godady Shared Hosting Server uncomment the line below
+RewriteRule ^(.*)$ index.php?/$1 [L]
+
+# Please comment this if you have uncommented the above
+# RewriteRule ^(.*)$ index.php/$1 [NC,L,QSA]
+
+</IfModule>
+
+<FilesMatch "^\.ht">
+	Order allow,deny
+	Deny from all
+</FilesMatch>
+
+DirectoryIndex index.php index.html
+
+<IfModule mod_headers.c>
+		 Header set X-Frame-Options "SAMEORIGIN"
+		 <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|vcf|vtt|woff2?)$">
+				 Header unset X-Frame-Options
+		 </FilesMatch>
+			Header set Connection keep-alive	
+			Header set X-XSS-Protection "1"
+			Header set X-Content-Type-Options	"nosniff"
+			Header add Access-Control-Allow-Origin "*"
+</IfModule>
+
+
+
+
+php_value display_errors On
+php_value error_log  error_log
+php_value error_reporting  E_ALL
+php_value display_startup_errors On
+php_value upload_max_filesize 100000M
+php_value max_file_uploads 1000
+php_value post_max_size 7500M
+php_value max_input_vars 10000
+php_value max_input_time 5000
+php_value memory_limit 128M

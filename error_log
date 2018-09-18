@@ -1,0 +1,10 @@
+[07-May-2018 15:26:47 Africa/Nairobi] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 48238592 bytes) in C:\xampp\htdocs\modules\application\controllers\Dashboard.php on line 53
+[07-May-2018 15:51:15 Africa/Nairobi] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 56627200 bytes) in C:\xampp\htdocs\modules\application\controllers\Dashboard.php on line 53
+[29-Jul-2018 12:05:55 Africa/Nairobi] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in C:\xampp\htdocs\modules\application\helpers\modules\ngo\dl_util\time_duration_helper.php on line 5
+[01-Aug-2018 13:28:27 Africa/Nairobi] PHP Fatal error:  Cannot redeclare Directories::volunteers() in C:\xampp\htdocs\modules\application\controllers\modules\ngo\directories\Directories.php on line 383
+[01-Aug-2018 13:29:44 Africa/Nairobi] PHP Fatal error:  Cannot redeclare Directories::volunteers() in C:\xampp\htdocs\modules\application\controllers\modules\ngo\directories\Directories.php on line 383
+[07-Aug-2018 15:12:39 Africa/Nairobi] PHP Fatal error:  Cannot redeclare Emails::sent() in C:\xampp\htdocs\modules\application\controllers\modules\communication\emails\Emails.php on line 250
+[09-Aug-2018 16:19:23 Africa/Nairobi] PHP Fatal error:  Cannot redeclare Emails::syncaccount() in C:\xampp\htdocs\modules\application\controllers\modules\communication\emails\Emails.php on line 300
+[17-Aug-2018 01:50:06 Africa/Nairobi] PHP Fatal error:  Cannot redeclare Users::deletegroup() in C:\xampp\htdocs\modules\application\controllers\users\Users.php on line 353
+[17-Aug-2018 01:50:17 Africa/Nairobi] PHP Fatal error:  Cannot redeclare Users::deletegroup() in C:\xampp\htdocs\modules\application\controllers\users\Users.php on line 353
+[15-Sep-2018 17:39:30 Africa/Nairobi] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\xampp\htdocs\modules\application\models\utilities\Mdbdata.php on line 974
