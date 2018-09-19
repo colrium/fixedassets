@@ -1,7 +1,7 @@
 <?php
 
 $config['version'] = 3.0;
-$config['version_name'] = 'Taurus';
+$config['version_name'] = 'TSC';
 
 $config['auto_update'] = FALSE;
 $config['update_url'] = FALSE;
@@ -15,10 +15,6 @@ $config['defaultmaplocation'] = array('latitude' => '1.2921° S', 'longitude' =>
 
 $config['fortmodules'] = array(
 								'fixedassets' => 'Fixed Assets',
-								'tracker' => 'Tracker',
-								'ngo' => 'Non-profit CRM',
-								'events' => 'Events',
-								'communication' => 'Communucation',
 								'assistant' => 'Assistant'
 							);
 $config['fortmodulesicons'] = array(
@@ -63,7 +59,7 @@ $config['modulescolorclasses'] = array(
 										'tracker' => 'red',
 										'assistant' => 'grey darken-1'
 									);
-$config['defaultmodule'] = '';
+$config['defaultmodule'] = 'fixedassets';
 
 
 
