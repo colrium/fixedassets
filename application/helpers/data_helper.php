@@ -88,7 +88,7 @@ function isajaxrequest(){
 
 function preredirect($url, $refresh=FALSE){
 	if ($refresh==FALSE) {
-		redirect($url);
+		redirect($url, 'refresh');
 	}
 	if (isajaxrequest()) {
 		echo site_url($url);		

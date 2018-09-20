@@ -7,11 +7,11 @@ class Dashboard extends CI_Controller {
 	function __construct(){
 		parent::__construct();	
 		$this->displayData['module'] = 'system';
-
+		isloggedin(TRUE);
 	}
 
 	public function index(){
-		isloggedin(TRUE);
+		
 		$defaultmodule = $this->config->item('defaultmodule');
 		$defaultmodule = trim($defaultmodule);
 		if (strlen($defaultmodule) > 0) {

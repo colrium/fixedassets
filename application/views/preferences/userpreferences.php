@@ -73,12 +73,14 @@ echo mdldivstrt('row');
 							$entities = array('none'=>'None');
 							$moduleentities = dbmoduletablenames('fixedassets');
 							if (is_array($moduleentities)) {
-								array_push($entities, $moduleentities);
+								foreach ($moduleentities as $moduleentitykey=>$moduleentity) {
+									$entities[$moduleentitykey] = $moduleentity;
+								}
 							}
 							
 
-							echo mdldivstrt('col s12 padded');
-								echo materializeiconselect('defaultcriteria', $entities, (array_key_exists('defaultcriteria', get_object_vars($preferences))?$preferences->defaultcriteria : 'fixedassets_primaryloc'), 'Default Load Criteria', 'folder_open', 'defaultcriteria', FALSE);
+							echo mdldivstrt('col s12 padded');							
+								echo materializeiconselect('defaultcriteria', $entities, (array_key_exists('defaultcriteria', get_object_vars($preferences))?$preferences->defaultcriteria : 'none'), 'Default Load Criteria', 'folder_open', 'defaultcriteria', FALSE);
 							echo mdldivend();
 						}
 					echo mdldivend();

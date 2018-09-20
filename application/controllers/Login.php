@@ -12,10 +12,14 @@ class Login extends CI_Controller {
 
 	// redirect if needed, otherwise display the user list
    function index(){
-	  $this->login();
+   		if (isloggedin(FALSE)) {				
+			preredirect($requestRefererer, 'location');
+		}
+		else{
+			$this->login();
+		}
    }
 
-   
 
 	public function login(){
 		$loggedin = isloggedin(FALSE);
@@ -23,20 +27,14 @@ class Login extends CI_Controller {
 		if ($requestRefererer == '' || $requestRefererer == 'Login/login' || $requestRefererer == 'Login/lock' || $requestRefererer == 'Login/logout') {
 		   $requestRefererer = 'Dashboard';
 		}
-
-		if ($loggedin){
-			// redirect them to the login page
-			preredirect($requestRefererer,'refresh');
-		}
-		else{      		
+		
+	    		
 			//check if any data has been posted
 			$posteduserData = $this->input->post(NULL, FALSE);
 			if (sizeof($posteduserData) > 0) {
 				  $remember = $this->input->post('rememberme');
 				  $username = $this->input->post('username');
 				  $password = $this->input->post('password');
-
-				  
 
 				  $this->form_validation->set_rules('username', 'Username/Email', 'trim|required');
 				  $this->form_validation->set_rules('password', 'Password', 'trim|required');
@@ -69,8 +67,7 @@ class Login extends CI_Controller {
 					if ($this->ion_auth->login($username, $password, $rememberMe)) {
 						$accesslogdata['status'] = '1';
 						setflashnotifacation('message', array('icon'=>'sentiment_satisfied', 'image'=>site_url('files/Files/outputmainimage/users/'.USERID), 'alert'=>'Login Successful'));
-						$loggedin = TRUE;
-						
+						$loggedin = TRUE;									
 					}
 					else{
 						$accesslogdata['status'] = '0';
@@ -81,20 +78,19 @@ class Login extends CI_Controller {
 					}
 				  }
 			}
-			
-			if ($loggedin) {				
-				preredirect($requestRefererer);
-			}
-			else{
-				$this->displayData['title']        = 'Login';
-				$this->displayData['pageTitle']    = breadcrumb('Login');
-				$this->displayData['mainTemplate'] = 'forms/users/login';
-				$this->displayData['nav'] = '';		      
-				renderpage($this->displayData);
-			}
-				
-				
+		if ($loggedin) {				
+			preredirect($requestRefererer, 'location');
 		}
+		else{
+			$this->displayData['title']        = 'Login';
+			$this->displayData['pageTitle']    = breadcrumb('Login');
+			$this->displayData['mainTemplate'] = 'forms/users/login';
+			$this->displayData['nav'] = '';		      
+			renderpage($this->displayData);
+		}
+		
+		
+		
 			
 
 	}

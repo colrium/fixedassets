@@ -19,28 +19,10 @@ $config['fortmodules'] = array(
 							);
 $config['fortmodulesicons'] = array(
 									'fixedassets' => 'weekend',
-									'inventory'=>'shopping_basket',
-									'communication' => 'forum',
-									'insurance' => 'verified_user', 
-									'library' => 'book', 
-									'invoicing' => 'attach_money', 
-									'events' => 'event', 
-									'ngo' => 'work',
-									'chama'=>'group',
-									'tracker'=>'gps_fixed',
 									'assistant' => 'headset_mic'
 								);
 $config['modulesanchorprefixes'] = array(
 										'fixedassets' => 'modules/fixedassets/',
-										'inventory'=>'modules/inventory/',
-										'communication' => 'modules/communication/', 
-										'insurance' => 'modules/insurance/', 
-										'library' => 'modules/library/', 
-										'invoicing' => 'modules/invoicing/', 
-										'events' => 'modules/events/', 
-										'ngo' => 'modules/ngo/',
-										'chama'=>'modules/chama/',
-										'tracker'=>'modules/tracker/',
 										'assistant' => 'modules/assistant/'
 									);
 
@@ -48,18 +30,9 @@ $config['modulesanchorprefixes'] = array(
 
 $config['modulescolorclasses'] = array(
 										'fixedassets' => 'brown',
-										'inventory' => 'amber',
-										'communication' => 'blue', 
-										'insurance' => 'cyan', 
-										'library' => 'orange', 
-										'invoicing' => 'green', 
-										'events' => 'teal', 
-										'ngo' => 'deep-orange',
-										'chama' => 'blue-grey',
-										'tracker' => 'red',
 										'assistant' => 'grey darken-1'
 									);
-$config['defaultmodule'] = 'fixedassets';
+$config['defaultmodule'] = '';
 
 
 

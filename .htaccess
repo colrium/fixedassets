@@ -1,24 +1,16 @@
-
 <IfModule mod_rewrite.c>
-
 RewriteEngine On
-RewriteRule ^([a-z0-9_-]+)\.html$ index.php/page/$1 [L]
-RewriteCond $1 !^(index\.php)
+RewriteCond $1 !^(index\.php|public|\.txt)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # For godady Shared Hosting Server uncomment the line below
-RewriteRule ^(.*)$ index.php?/$1 [L]
+RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
 
 # Please comment this if you have uncommented the above
 # RewriteRule ^(.*)$ index.php/$1 [NC,L,QSA]
 
 </IfModule>
-
-<FilesMatch "^\.ht">
-	Order allow,deny
-	Deny from all
-</FilesMatch>
 
 DirectoryIndex index.php index.html
 
@@ -32,9 +24,6 @@ DirectoryIndex index.php index.html
 			Header set X-Content-Type-Options	"nosniff"
 			Header add Access-Control-Allow-Origin "*"
 </IfModule>
-
-
-
 
 php_value display_errors On
 php_value error_log  error_log
